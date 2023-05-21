@@ -7,6 +7,7 @@ use App\Http\Resources\UserResource;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -67,5 +68,36 @@ class UserController extends Controller
         } catch (ModelNotFoundException $e) {
             return response()->json(['message' => 'User not found'], 404);
         }
+    }
+    public function updateAvatar(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+        $file = $request->file('image');
+        $fileName = 'avatar_' . time() . '.' . $file->getClientOriginalExtension();
+        $filePath = 'avatars/' . $fileName; // Simpan dalam folder "avatars"
+
+        try{
+            $user = User::findOrFail($id);
+            $oldavatar = $user->image;
+            if ($oldavatar){
+                Storage::disk('gcs')->delete($user->image);
+            }
+            $path = Storage::disk('gcs')->put($filePath,  file_get_contents($file));
+            $url = Storage::disk('gcs')->url($filePath);
+            $user->image = $url;
+            $user->save();
+            return response()->json([
+                'message' => 'Image uploaded successfully',
+                'url' => $url,
+            ]);
+
+        }catch(ModelNotFoundException $e){
+            return response()->json([
+                'message' => 'Failed to upload avatar, id not found',
+            ],404);
+        }
+        
     }
 }

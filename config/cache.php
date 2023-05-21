@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('CACHE_DRIVER', 'file'),
+    'default' => env('CACHE_DRIVER', 'gcs'),
 
     /*
     |--------------------------------------------------------------------------
@@ -47,6 +47,13 @@ return [
             'table' => 'cache',
             'connection' => null,
             'lock_connection' => null,
+        ],
+        'gcs' => [
+            'driver' => 'gcs',
+            'project_id' => env('GOOGLE_CLOUD_PROJECT_ID'),
+            'key_file' => env('GOOGLE_CLOUD_KEY_FILE'),
+            'bucket' => 'petani-test',
+            'path' => 'cache',
         ],
 
         'file' => [

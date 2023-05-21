@@ -1,0 +1,70 @@
+runtime: php81 # version of php
+env: standard # set app engine env to standard
+service: petanikita
+
+runtime_config:
+  document_root: .
+
+# for detecting static files in the public folder
+handlers:
+  - url: /(.*\.(gif|png|jpg|css|js))$
+    static_files: public/\1
+    upload: public/.*\.(gif|png|jpg|css|js)$
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    script: auto
+
+env_variables:
+  APP_KEY: base64:r0J41TC9w4O+q02LvsBvQPyPHROibYw9PkS0leprEDI=
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  LOG_CHANNEL: stack
+  LOG_DEPRECATIONS_CHANNEL: null
+  LOG_LEVEL: debug
+  LOG_LEVEL_SLACK: debug
+  LOG_SLACK_WEBHOOK_URL: https://hooks.slack.com/services/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
+
+  DB_CONNECTION: mysql
+  DB_HOST: 34.74.78.129
+  DB_PORT: 3306
+  DB_DATABASE: petanikita_db
+  DB_USERNAME: root
+  DB_PASSWORD: petani123
+  # CACHE_DRIVER: database
+
+  APP_NAME: "petani"
+  APP_ENV: production
+  APP_DEBUG: true
+  APP_URL:
+  ASSET_URL:
+
+  SESSION_DRIVER: cookie
+  QUEUE_CONNECTION: sync
+
+  MAIL_MAILER: smtp
+  MAIL_HOST:
+  MAIL_PORT: 465
+  MAIL_USERNAME:
+  MAIL_PASSWORD:
+  MAIL_ENCRYPTION: ssl
+  MAIL_FROM_ADDRESS:
+  MAIL_FROM_NAME:
+
+  PUSHER_APP_ID:
+  PUSHER_APP_KEY:
+  PUSHER_APP_SECRET:
+  PUSHER_APP_CLUSTER: mt1
+  MIX_PUSHER_APP_KEY: "${PUSHER_APP_KEY}"
+  MIX_PUSHER_APP_CLUSTER: "${PUSHER_APP_CLUSTER}"
+
+  GOOGLE_CLOUD_KEY_FILE: /app/petani/key.json
+  GOOGLE_CLOUD_PROJECT_ID: petani-test
+  GOOGLE_CLOUD_STORAGE_BUCKET: petani-test
+  GOOGLE_CLOUD_STORAGE_API_URI: https://storage.googleapis.com/petani-test
+
+  #the tmp folder is used for caching on GCP as opposed to the default storage folder
+  APP_SERVICES_CACHE: /tmp/services.php
+  APP_PACKAGES_CACHE: /tmp/packages.php
+  APP_CONFIG_CACHE: /tmp/config.php
+  APP_ROUTES_CACHE: /tmp/routes.php

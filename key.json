@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "petani-test",
+    "private_key_id": "7f83d7395c9c9124879a8545f97c195858a020f4",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBcPMjVIISvULX\nuTkAUJ+qcbfHf+QJvPuKMb5irx84fycZfrljFtLQvYOaU7q58pOnACocErq/AJac\nck/uWnp0ccE1SPgaftKVWxZ3F59PfqJ6nrQthvf5TZbJvS26G+bKKo46mYoPj8eA\n7EjvBA0GAhZnTlwX23sk4GF8U9C0ctkwbG3zVB29APWg8pBIvN/uuJ7ADvLeOqVY\ni53n8YJSUijeqDAPXVXe/XFS2o/FXkjbGyQCP3tX06SFXOjY5SQe/+DXuzLCiC3U\n4IcjQnu/V3f+OsNcJglGqfulaEhSyqnt98QN2k8zP86j2ijR+w7pDmMU8CU9F2kO\n/nXTUg4bAgMBAAECggEAEBATAIIJ8whoPoWQ6CfJuluLCTPjebOJp6YNyyADlatp\nUcKmHkZM5yx1eyEsxjgQbrOiy4X6n9Wqq/8KCB7XQEgZ5RTUFU8mqWRQ7z606eL4\nFvqKt6UXfkolFUdyPpwGhA8YlGEfh79Gr7vvKnnJoxAVUCq/lvOQvDUtoydKk1E4\n9pOt71qYCcYYUlAkO7sHj+LQv14c6/hf4suqMklGkSf4fQX51+7QOJW9cUiAmHij\nuPUCxuvS0Rxt7HZMqk5+3dS2PtrjArf58AFhFVvsEGjVQWeCmZPPsUX/+Wr9O20D\nj96W+Cf1TbM33Kyl5xWZH2g/odCk5sndOKy2SEEFkQKBgQD2HaKJxvga6qNC3gAI\nlx1vY/xuUO7GDlM5TbNdDmhBgGrpT7cTInuQF48O29PvvazcVEgHvZz0LwRBXtS0\n8o1sTKgCQ4qXGIdj/dQ7UW6FfUJxs+ZVF9DVlWRz8RsC1cwJ6vWfM6JXW6u2Rqm4\ntcKLBSGP0htXBV1tyPHAVS42BwKBgQDJNcHeww47oW/B+9iJlN457kHZ9pCXN1WZ\nnhsZhnxS3RLrZr8dNjxeCKHw28qbF4j1h9M3ji34rHe/T1qE+IpHkLFu1Bzzdk4Y\nBh8n2F3SHVj34m0UjfsCt98z/23LKSexYCS6IIyTAEq7IfyqRCKtnay0rlrvLGaH\nhrAWEhJCTQKBgHUuvwkit1b5iSp5UULF0LoMvVA5MLcUcwPBvzj7dyBY6I6V6fEu\nZe7BiNfmSw7HHNr7NiCZY3XQPRJy+Iv/QN7j0MrjJcWzZCNz4+0qZJkiftRsd6rk\nYAaRzvZ1QgsjiLbgLHrUtuMpPqTXGFBeGnbexpAX1fSlFUsEdjbBV/NZAoGBAIJr\nxe6OoHsmeTpT9Fe5lxIVzblqiO57f5DDWu2ArrVHdyv+vYJB1X9eORnWXc2Jw8zi\n7ZXlIwc9Q6FN3m6ya29X6qrb8qgc1yHbVfaN2MKJI1IKAoqAPWPVq2gY+SHm20Ot\n/iBnWLcwSUBjF1OGNrQyr++t1GOTdCIEu76SmCNBAoGBAKTQ4tRhPiRDAduekgr5\nZm4v0pj6pn5xa7eBufbJvpBWBSGhA4YYTgiPWbFKgqm2wbuHBxEVHDHa1/2SZg0G\nSNuw6DAm6E4gZ+/EuZFo//TBVTibdvMYTcsP2fn2gUS0LpW7a/ftQDYGEoAHtrqM\nH+Eh6sS9UDpR09fqsnGcA/+E\n-----END PRIVATE KEY-----\n",
+    "client_email": "petani-test@petani-test.iam.gserviceaccount.com",
+    "client_id": "107785063407017811718",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/petani-test%40petani-test.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
